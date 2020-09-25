@@ -1,6 +1,6 @@
-## Interface Funcional
+## Interfaces Funcionais
 
-São interaces no qual possuem um único método abstrato
+São interfaces que possuem um único método abstrato.
 
 ```
 @FunctionalInterface
@@ -9,14 +9,14 @@ interface Calculo {
 }
 ```
 
-Podemos criar uma função anonima usando lambda associando a uma interface funcional, não precisamos criar uma classe e método para implementar a interface
+Podemos criar uma função anônima usando lambda associando a uma interface funcional, não precisamos criar uma classe e método para implementar a interface.
 
 ```
 Calculo calc = (a, b) -> a + b;
 System.out.println(calc.executar(1, 3));
 ```
 
-Na versão 8 do java foram disponibilizadas as interfaces funcionais, já temos uma interface com a funcionalidade da que criamos acima.
+Na versão 8 do Java foram disponibilizadas as interfaces funcionais, já temos uma interface com a funcionalidade que criamos acima.
 
 ```
 BinaryOperator<Integer> calc2 = (a, b)  -> (a * b);
