@@ -24,3 +24,33 @@ System.out.println(operacao.apply(4, 5));
 ```
 
 [Documentação](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html) para consulta desta e muitas outras interfaces funcionais.
+
+## Foreach
+
+A partir do Java 8 em todas as coleções temos acesso ao foreach que facilita iterar nelas.
+
+A seguir temos uma lista de produtos:
+
+```
+var produtos = Arrays.asList("Notebook Dell", "Notebook Lenovo", "Notebook Samsung");
+```
+
+Para imprimirmos o nome do produtos antes do Java 8 precisamos usar um for tradicional.
+
+```
+for(var produto: produtos) {
+    System.out.println(produto);
+}
+```
+
+Podemos fazer essa interação usando o foreach de forma mais concisa.
+
+```
+produtos.forEach(nome -> System.out.println(nome));
+```
+
+É possível simplificar ainda mais o código usando menos símbolos e para isso temos Method References.
+
+```
+produtos.forEach(System.out::println);
+```
