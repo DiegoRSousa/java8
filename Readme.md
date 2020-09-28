@@ -54,3 +54,13 @@ produtos.forEach(nome -> System.out.println(nome));
 ```
 produtos.forEach(System.out::println);
 ```
+
+## Predicate
+
+Predicate é uma interface funcional 
+
+```
+Produto notebookSamsung = new Produto("Notebook Samsung", 3000);
+Predicate<Produto> isCaro = produto -> produto.getPreco() > 2500;
+System.out.println(isCaro.test(notebookSamsung));
+```
