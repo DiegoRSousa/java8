@@ -57,10 +57,40 @@ produtos.forEach(System.out::println);
 
 ## Predicate
 
-Predicate é uma interface funcional 
+Predicate é uma interface funcional que recebe um argumento genérico e retorna um boolean.
 
 ```
 Produto notebookSamsung = new Produto("Notebook Samsung", 3000);
 Predicate<Produto> isCaro = produto -> produto.getPreco() > 2500;
 System.out.println(isCaro.test(notebookSamsung));
+```
+
+## Consumer
+
+Consumer é uma interface funcional que recebe um argumento genérico faz um processamento e não retorna nada.
+
+```
+Consumer<Produto> imprimirNome = p -> System.out.println(p.getDescricao() + " - " + p.getPreco());
+Produto produto = new Produto("Refrigerante", 3.75);
+imprimirNome.accept(produto);
+```
+
+## Function
+
+Interface que representa uma função que aceita um argumento e produz um resultado genérico.
+
+```
+Function<Integer, String> parOuImpar = numero -> numero % 2 == 0 ? "Par" : "Ímpar";
+System.out.println(parOuImpar.apply(10));
+```
+
+## Composição de funções
+
+Através da composição de funções podemos desenvolver funções pequenas com responsabilidades limitadas
+e reaproveita-las.
+
+```
+Function<String, String> resultado = valor -> "O resultado final é: " + valor;
+String resultadoFinal = parOuImpar.andThen(resultado).apply(3);
+System.out.println(resultadoFinal);
 ```
