@@ -94,3 +94,12 @@ Function<String, String> resultado = valor -> "O resultado final é: " + valor;
 String resultadoFinal = parOuImpar.andThen(resultado).apply(3);
 System.out.println(resultadoFinal);
 ```
+
+## Suplier
+
+É uma interface funcional e pode, portanto, ser usada como destino de atribuição para uma expressão lambda.
+
+```
+Supplier<List<String>> lista = () -> Arrays.asList("Ana", "Silva", "Pedro");
+System.out.println(lista.get());
+```
