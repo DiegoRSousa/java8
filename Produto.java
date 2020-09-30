@@ -1,5 +1,3 @@
-import java.lang.reflect.Constructor;
-
 public class Produto {
     private String descricao;
     private double preco;

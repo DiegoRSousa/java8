@@ -95,7 +95,7 @@ String resultadoFinal = parOuImpar.andThen(resultado).apply(3);
 System.out.println(resultadoFinal);
 ```
 
-## Suplier
+## Supplier
 
 É uma interface funcional e pode, portanto, ser usada como destino de atribuição para uma expressão lambda.
 
@@ -103,3 +103,16 @@ System.out.println(resultadoFinal);
 Supplier<List<String>> lista = () -> Arrays.asList("Ana", "Silva", "Pedro");
 System.out.println(lista.get());
 ```
+
+## UnaryOperator
+
+É uma interface funcional que seu tipo de parâmetro de entrada é igual ao de retorno, recebe um valor genérico faz o processamento e retorna o resultado.
+
+```
+UnaryOperator<Integer> maisDois = n -> n + 2;
+UnaryOperator<Integer> vezesDois = n -> n * 2;
+UnaryOperator<Integer> aoQuadrado = n -> n * n;
+var resultado = maisDois.andThen(vezesDois).andThen(aoQuadrado).apply(0);
+System.out.println(resultado);
+```
+
