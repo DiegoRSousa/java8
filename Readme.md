@@ -116,3 +116,11 @@ var resultado = maisDois.andThen(vezesDois).andThen(aoQuadrado).apply(0);
 System.out.println(resultado);
 ```
 
+### Binary Operator
+
+Representa uma operação sobre dois operandos do mesmo tipo, produz o resultado do mesmo tipo dos operandos.
+
+```
+BinaryOperator<Double> media1 = (n1, n2) -> (n1 + n2) / 2;
+System.out.println(media1.apply(5.0, 3.0));
+```
