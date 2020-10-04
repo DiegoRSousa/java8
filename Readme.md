@@ -124,3 +124,12 @@ Representa uma operação sobre dois operandos do mesmo tipo, produz o resultado
 BinaryOperator<Double> media1 = (n1, n2) -> (n1 + n2) / 2;
 System.out.println(media1.apply(5.0, 3.0));
 ```
+
+### Stream
+
+Representa uma sequência de elementos e oferece suporte a diferente tipos de operações estilo funcional para realizar cálculos sobre esses elementos.
+
+```
+List<String> pessoas = Arrays.asList("Ana", "Pedro", "Silva", "Gariela");
+pessoas.stream().forEach(System.out::println);
+```
