@@ -116,7 +116,7 @@ var resultado = maisDois.andThen(vezesDois).andThen(aoQuadrado).apply(0);
 System.out.println(resultado);
 ```
 
-### Binary Operator
+## Binary Operator
 
 Representa uma operação sobre dois operandos do mesmo tipo, produz o resultado do mesmo tipo dos operandos.
 
@@ -125,11 +125,20 @@ BinaryOperator<Double> media1 = (n1, n2) -> (n1 + n2) / 2;
 System.out.println(media1.apply(5.0, 3.0));
 ```
 
-### Stream
+## Stream
 
 Representa uma sequência de elementos e oferece suporte a diferente tipos de operações estilo funcional para realizar cálculos sobre esses elementos.
 
 ```
 List<String> pessoas = Arrays.asList("Ana", "Pedro", "Silva", "Gariela");
 pessoas.stream().forEach(System.out::println);
+```
+
+## Map
+
+Usa uma expressão lambda para transformar uma Stream em uma nova Stream de mesmo tamanho mas com os dados transformados.
+
+```
+Stream<String> linguagens = Stream.of("Java ", "C# ", "Javascript\n");
+linguagens.map(l -> l.toUpperCase()).forEach(System.out::print);
 ```
