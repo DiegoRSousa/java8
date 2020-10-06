@@ -142,3 +142,14 @@ Usa uma expressão lambda para transformar uma Stream em uma nova Stream de mesm
 Stream<String> linguagens = Stream.of("Java ", "C# ", "Javascript\n");
 linguagens.map(l -> l.toUpperCase()).forEach(System.out::print);
 ```
+
+## Filter   
+
+Usa um Predicate para a partir de um Stream retornar um novo Stream filtrando os dados de acordo com o Predicate.
+
+```
+alunos.stream()
+    .filter(a -> a.getNota() >= 7)
+    .map(a -> "Parabéns: " + a.getNome() + " você foi aprovado com nota: " + a.getNota())
+    .forEach(System.out::println);
+```
