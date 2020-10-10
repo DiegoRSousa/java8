@@ -1,16 +1,21 @@
 public class Aluno {
     private final String nome;
-    private final double nota;
+    private final double media;
+    private final double maiorNota;
 
-    public Aluno(String nome, double nota) {
+    public Aluno(String nome, double media, double maiorNota) {
         this.nome = nome;
-        this.nota = nota;
+        this.media = media;
+        this.maiorNota = maiorNota;
     }
 
     public String getNome() {
         return nome;
     }
-    public double getNota() {
-        return nota;
+    public double getMedia() {
+        return media;
+    }
+    public double getMaiorNota() {
+        return maiorNota;
     }
 }
