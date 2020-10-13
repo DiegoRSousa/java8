@@ -153,3 +153,15 @@ alunos.stream()
     .map(a -> "Parabéns: " + a.getNome() + " você foi aprovado com nota: " + a.getNota())
     .forEach(System.out::println);
 ```
+
+## Reduce
+
+É uma operação terminal que realiza uma redução nos elementos do fluxo usando uma função de acumulação associativa.
+
+```
+List<Integer> nums = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
+BinaryOperator<Integer> soma = (ac, n) -> ac + n;
+Predicate<Integer> isPar = (v) -> v % 2 == 0;
+var total = nums.stream().reduce(soma).get();
+System.out.println(total);
+```

@@ -3,6 +3,10 @@ public class Aluno {
     private final double media;
     private final double maiorNota;
 
+    public Aluno(String nome, double media) {
+        this(nome, media, 0);
+    }
+
     public Aluno(String nome, double media, double maiorNota) {
         this.nome = nome;
         this.media = media;
