@@ -22,4 +22,9 @@ public class Aluno {
     public double getMaiorNota() {
         return maiorNota;
     }
+
+    @Override
+    public String toString() {
+        return "Nome: " + nome + " Media: " + media;
+    }
 }
